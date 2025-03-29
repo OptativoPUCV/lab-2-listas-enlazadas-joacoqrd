@@ -52,6 +52,9 @@ void * nextList(List * list) {
         return NULL;
     }
     list -> current =  list -> current -> next; 
+    if (list -> current == NULL){
+        return NULL;
+    }
     return list -> current -> data;
 }
 
