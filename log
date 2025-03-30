@@ -80,3 +80,17 @@ list.c:146:12: error: return makes pointer from integer without a cast [-Werror=
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5d76246
+Sat, Mar 29, 2025 11:14:53 PM: 
+ list.c | 27 +++++++++++++++++++++++----
+ 1 file changed, 23 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:140:50: error: 'return' with no value, in function returning non-void [-Werror]
+     if (list == NULL || list -> current == NULL) return;
+                                                  ^~~~~~
+list.c:139:8: note: declared here
+ void * popCurrent(List * list) {
+        ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+132d9a9
